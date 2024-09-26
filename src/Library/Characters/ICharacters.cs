@@ -2,9 +2,10 @@ namespace Ucu.Poo.RoleplayGame;
 
 public interface ICharacters
 {
-    private int health;
-    public string Name;
-    public int AttackValue;
-    public int DefenseValue;
-    public int Health;
+    public string Name { get; set; }
+    public int AttackValue { get; }
+    public int DefenseValue { get; }
+    public int Health { get; }
+    public void ReceiveAttack(int power);
+    public void Cure();
 }
